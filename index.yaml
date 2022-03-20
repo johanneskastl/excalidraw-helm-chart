@@ -3,6 +3,16 @@ entries:
   excalidraw:
   - apiVersion: v2
     appVersion: v0.11.0
+    created: "2022-03-20T13:07:53.890742863Z"
+    description: Virtual whiteboard for sketching hand-drawn like diagrams
+    digest: a03eb0a3155f076c559864816004cd5b5c8b82438fe8936d610ae6101c7bbb20
+    name: excalidraw
+    type: application
+    urls:
+    - https://github.com/johanneskastl/excalidraw-helm-chart/releases/download/excalidraw-0.4.0/excalidraw-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
+    appVersion: v0.11.0
     created: "2022-03-20T12:58:19.849669476Z"
     description: Virtual whiteboard for sketching hand-drawn like diagrams
     digest: 13173b0a0d70d469e7a6f8cee9423444e383fed75f32f36ddc83aa4c131cd958
@@ -21,4 +31,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/excalidraw-helm-chart/releases/download/excalidraw-0.2.0/excalidraw-0.2.0.tgz
     version: 0.2.0
-generated: "2022-03-20T12:58:19.849868279Z"
+generated: "2022-03-20T13:07:53.890768264Z"
