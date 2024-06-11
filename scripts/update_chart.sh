@@ -10,7 +10,7 @@ set -o pipefail
 CHART="$1"
 UPDATE_TYPE="$2"
 
-version="$(awk '/^version:/ {print $2}' "${CHART}/Chart.yaml")"
+version="$(awk '/^version:/ {print $2}' "charts/${CHART}/Chart.yaml")"
 echo "Old version is ${version}"
 major="$(echo "${version}" | cut -d. -f1)"
 minor="$(echo "${version}" | cut -d. -f2)"
@@ -33,4 +33,4 @@ newversion="${major}.${minor}.${patch}"
 echo "New version is ${newversion}"
 
 # change version in Chart.yaml
-sed -i "s/^version:.*/version: ${newversion}/g" "${CHART}/Chart.yaml"
+sed -i "s/^version:.*/version: ${newversion}/g" "charts/${CHART}/Chart.yaml"
