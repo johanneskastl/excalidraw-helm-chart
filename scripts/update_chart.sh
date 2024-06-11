@@ -21,7 +21,7 @@ then
   major="$(( major + 1 ))"
   minor=0
   patch=0
-elif [[ "${UPDATE_TYPE}" =~ 'minor' ]]
+elif [[ "${UPDATE_TYPE}" =~ (minor|pinDigest) ]]
 then
   minor="$(( minor + 1 ))"
   patch=0
