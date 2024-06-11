@@ -26,6 +26,20 @@
     {
       "matchDatasources": ["docker"],
       "pinDigests": true
+    },
+    {
+      "matchManagers": ["regex"],
+      "postUpgradeTasks": {
+        "commands": [
+          "./scripts/update_chart.sh '{{{updateType}}}'"
+        ],
+        "fileFilters": [
+                "**/Chart.yaml",
+                "**/README.md",
+                "**/README_CHANGELOG.md.gotmpl"
+        ],
+        "executionMode": "branch"
+      }
     }
   ]
 }
