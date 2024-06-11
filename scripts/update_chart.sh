@@ -2,14 +2,15 @@
 
 set -o pipefail
 
-[[ "${#}" == "1" ]] || {
-    echo "Please give the update type as only argument"
+[[ "${#}" == "2" ]] || {
+    echo "Please give the chart name and the update type as only arguments"
     exit 3
 }
 
-UPDATE_TYPE="$1"
+CHART="$1"
+UPDATE_TYPE="$2"
 
-version="$(awk '/^version:/ {print $2}' "Chart.yaml")"
+version="$(awk '/^version:/ {print $2}' "${CHART}/Chart.yaml")"
 echo "Old version is ${version}"
 major="$(echo "${version}" | cut -d. -f1)"
 minor="$(echo "${version}" | cut -d. -f2)"
@@ -32,4 +33,4 @@ newversion="${major}.${minor}.${patch}"
 echo "New version is ${newversion}"
 
 # change version in Chart.yaml
-sed -i "s/^version:.*/version: ${newversion}/g" "Chart.yaml"
+sed -i "s/^version:.*/version: ${newversion}/g" "${CHART}/Chart.yaml"
