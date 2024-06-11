@@ -10,6 +10,18 @@
   "prHourlyLimit": 0,
   "branchConcurrentLimit": 0,
   "prConcurrentLimit": 0,
+  "customManagers": [
+    {
+      "type": "regex",
+      "fileMatch": ["^charts\\/excalidraw\\/README\\.md$"],
+      "matchStrings": [
+        "\\[AppVersion:\\s+(?<currentValue>.*?)\\]",
+        "AppVersion-(?<currentValue>.*?)-informational"
+      ],
+      "depNameTemplate": "excalidraw/excalidraw",
+      "datasourceTemplate": "docker"
+    }
+  ],
   "packageRules": [
     {
       "matchDatasources": ["docker"],
