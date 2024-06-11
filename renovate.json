@@ -16,7 +16,7 @@
       "pinDigests": true
     },
     {
-      "matchManagers": ["regex"],
+      "matchManagers": ["helm-values"],
       "postUpgradeTasks": {
         "commands": [
           "./scripts/update_chart.sh '{{{updateType}}}'"
