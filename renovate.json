@@ -12,7 +12,7 @@
   "prConcurrentLimit": 0,
   "customManagers": [
     {
-      "type": "regex",
+      "customType": "regex",
       "fileMatch": ["^charts\\/excalidraw\\/README\\.md$"],
       "matchStrings": [
         "\\[AppVersion:\\s+(?<currentValue>.*?)\\]",
