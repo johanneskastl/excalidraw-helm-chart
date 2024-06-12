@@ -1,10 +1,10 @@
 ---
-name: "Charts: Release"
+name: Release Charts
 
 on:
   workflow_dispatch:
   push:
-    branches: 
+    branches:
       - main
     paths:
       - 'charts/**'
@@ -13,6 +13,10 @@ on:
 
 jobs:
   release:
+    # depending on default permission settings for your org (contents being read-only or read-write for workloads), you will have to add permissions
+    # see: https://docs.github.com/en/actions/security-guides/automatic-token-authentication#modifying-the-permissions-for-the-github_token
+    permissions:
+      contents: write
     if: "!contains(github.event.head_commit.message, '[ci-skip]')"
     runs-on: ubuntu-22.04
     steps:
