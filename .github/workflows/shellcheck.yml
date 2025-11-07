@@ -1,0 +1,25 @@
+---
+
+name: "Shellcheck"
+permissions: {}
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/*.sh'
+  pull_request:
+    paths:
+      - 'scripts/*.sh'
+
+jobs:
+  shellcheck:
+    name: Shellcheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - name: Run ShellCheck
+        uses: ludeeus/action-shellcheck@00cae500b08a931fb5698e11e79bfbd38e612a38  # 2.0.0

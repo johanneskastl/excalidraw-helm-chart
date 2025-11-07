@@ -40,4 +40,3 @@ For example,
 ```console
 helm install excalidraw johanneskastl-excalidraw/excalidraw -f values.yaml
 ```
-
