@@ -2,7 +2,17 @@ apiVersion: v2
 name: excalidraw
 description: Virtual whiteboard for sketching hand-drawn like diagrams
 type: application
-version: 0.6.1
+version: 0.6.2
+keywords:
+  - whiteboard
+  - excalidraw
+home: https://github.com/johanneskastl/excalidraw-helm-chart/tree/main/charts/excalidraw/
+sources:
+  - https://github.com/excalidraw/excalidraw
 maintainers:
   - name: johanneskastl
     email: git@johannes-kastl.de
+annotations:
+  artifacthub.io/changes: |-
+    - kind: change
+      description: add the artifact annotation
