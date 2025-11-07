@@ -9,6 +9,8 @@ on:
       - '.github/labels.yaml'
       - '.github/workflows/labels.yaml'
 
+permissions: {}
+
 jobs:
   labeler:
     runs-on: ubuntu-24.04
