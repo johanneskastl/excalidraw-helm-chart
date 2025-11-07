@@ -11,6 +11,9 @@
   "prHourlyLimit": 0,
   "branchConcurrentLimit": 0,
   "prConcurrentLimit": 0,
+  "pre-commit": {
+    "enabled": true
+  },
   "packageRules": [
     {
       "matchDatasources": ["docker"],
