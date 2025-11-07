@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "labels": ["renovate"],
-  "addLabels": ["renovate"],
+  "labels": ["renovatebot-was-here"],
+  "addLabels": ["renovatebot-was-here", "{{depName}}"],
   "bumpVersion": "patch",
   "gitAuthor": "renovatebot <renovatebot@johannes-kastl.de>",
   "separateMajorMinor": true,
