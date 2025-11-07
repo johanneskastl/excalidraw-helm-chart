@@ -1,6 +1,28 @@
 apiVersion: v1
 entries:
   excalidraw:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: change
+          description: add the artifact annotation
+    apiVersion: v2
+    created: "2025-11-07T19:17:46.695231622Z"
+    description: Virtual whiteboard for sketching hand-drawn like diagrams
+    digest: bd58c4a287adfe2137c0bd87903fa78bf62321cfc4105cd59fe9c80472bb396f
+    home: https://github.com/johanneskastl/excalidraw-helm-chart/tree/main/charts/excalidraw/
+    keywords:
+    - whiteboard
+    - excalidraw
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: excalidraw
+    sources:
+    - https://github.com/excalidraw/excalidraw
+    type: application
+    urls:
+    - https://github.com/johanneskastl/excalidraw-helm-chart/releases/download/excalidraw-0.6.2/excalidraw-0.6.2.tgz
+    version: 0.6.2
   - apiVersion: v2
     created: "2025-11-07T18:27:57.071265858Z"
     description: Virtual whiteboard for sketching hand-drawn like diagrams
@@ -92,4 +114,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/excalidraw-helm-chart/releases/download/excalidraw-0.2.0/excalidraw-0.2.0.tgz
     version: 0.2.0
-generated: "2025-11-07T18:27:57.071304269Z"
+generated: "2025-11-07T19:17:46.695268962Z"
