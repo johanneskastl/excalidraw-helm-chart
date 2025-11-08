@@ -13,6 +13,8 @@ on:
     paths:
       - renovate.json
 
+permissions: {}
+
 jobs:
   validate:
     name: renovate-config-validator
