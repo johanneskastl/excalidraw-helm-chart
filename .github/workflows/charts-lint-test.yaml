@@ -2,6 +2,13 @@
 name: "Charts: Lint and test"
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'charts/**'
+      - '!charts/**/README.md'
+      - '!charts/**/README.md.gotmpl'
   pull_request:
     paths:
       - 'charts/**'
