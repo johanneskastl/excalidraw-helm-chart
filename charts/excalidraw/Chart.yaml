@@ -2,7 +2,7 @@ apiVersion: v2
 name: excalidraw
 description: Virtual whiteboard for sketching hand-drawn like diagrams
 type: application
-version: 0.6.2
+version: 0.6.3
 keywords:
   - whiteboard
   - excalidraw
@@ -14,5 +14,5 @@ maintainers:
     email: git@johannes-kastl.de
 annotations:
   artifacthub.io/changes: |-
-    - kind: change
-      description: add the artifact annotation
+    - kind: changed
+      description: update excalidraw digest to sha256:62fbadfb9ad2f5ddb56f66e57295f0372abfcbe6b6ca4ae7713e1b13ad56985d
