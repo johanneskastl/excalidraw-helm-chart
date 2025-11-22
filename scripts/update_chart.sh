@@ -35,6 +35,6 @@ sed -i "s/^version:.*/version: ${newversion}/g" "charts/${CHART}/Chart.yaml"
 sed -i "s/- kind: .*$/- kind: changed/g" "charts/${CHART}/Chart.yaml"
 sed -i "/kind/ {n; s/description:.*/description: update excalidraw digest to ${NEW_DIGEST}/g}" "charts/${CHART}/Chart.yaml"
 
-# change version in README.md
-sed -i "s/\[Version:.*\]/[Version: ${newversion}]/g" "charts/${CHART}/README.md"
-sed -i "s/Version-.*-informational/Version-${newversion}-informational/g" "charts/${CHART}/README.md"
+# change versions in README.md
+sed -i "/img.shields.io/ s/Version\\: ${version}/Version: ${newversion}/g" "charts/${CHART}/README.md"
+sed -i "/img.shields.io/ s/Version-${version}-informational/Version-${newversion}-informational/g" "charts/${CHART}/README.md"
