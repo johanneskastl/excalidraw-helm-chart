@@ -12,6 +12,8 @@
   "prHourlyLimit": 0,
   "branchConcurrentLimit": 0,
   "prConcurrentLimit": 0,
+  "rebaseWhen": "behind-base-branch",
+  "additionalBranchPrefix": "{{parentDir}}-",
   "pre-commit": {
     "enabled": true
   },
