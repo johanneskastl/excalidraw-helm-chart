@@ -38,3 +38,20 @@ sed -i "/kind/ {n; s/description:.*/description: update excalidraw digest to ${N
 # change versions in README.md
 sed -i "/img.shields.io/ s/Version\\: ${version}/Version: ${newversion}/g" "charts/${CHART}/README.md"
 sed -i "/img.shields.io/ s/Version-${version}-informational/Version-${newversion}-informational/g" "charts/${CHART}/README.md"
+
+changelog="
+### Version ${newversion}
+
+#### Added
+
+* N/A
+
+#### Changed
+
+* update excalidraw digest to ${NEW_DIGEST}
+
+#### Fixed
+
+* N/A"
+
+sed -i "/adheres/r /dev/stdin"<<< "${changelog}" -- "charts/${CHART}/README_CHANGELOG.md.gotmpl"
