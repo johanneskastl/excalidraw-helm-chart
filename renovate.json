@@ -12,10 +12,20 @@
   "prHourlyLimit": 0,
   "branchConcurrentLimit": 0,
   "prConcurrentLimit": 0,
+  "rebaseWhen": "behind-base-branch",
+  "additionalBranchPrefix": "{{parentDir}}-",
   "pre-commit": {
     "enabled": true
   },
   "packageRules": [
+    {
+      "matchFileNames": [".pre-commit-config.yaml"],
+      "automerge": true,
+      "separateMajorMinor": true,
+      "separateMinorPatch": false,
+      "separateMultipleMajor": false,
+      "separateMultipleMinor": false
+    },
     {
       "matchDatasources": ["docker"],
       "pinDigests": true
@@ -24,12 +34,13 @@
       "matchManagers": ["helm-values"],
       "postUpgradeTasks": {
         "commands": [
-          "./scripts/update_chart.sh '{{{parentDir}}}' '{{{updateType}}}' '{{{newDigest}}}'"
+          "./scripts/update_chart.sh '{{{parentDir}}}' '{{{updateType}}}' '{{{newDigest}}}'",
+          "./scripts/generate_readmes_with_helm-docs.sh '{{{parentDir}}}'"
         ],
         "fileFilters": [
-                "**/Chart.yaml",
-                "**/README.md",
-                "**/README_CHANGELOG.md.gotmpl"
+          "**/Chart.yaml",
+          "**/README.md",
+          "**/README_CHANGELOG.md.gotmpl"
         ],
         "executionMode": "branch"
       }
