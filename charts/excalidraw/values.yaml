@@ -8,7 +8,7 @@ image:
   repository: docker.io/excalidraw/excalidraw
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest@sha256:62fbadfb9ad2f5ddb56f66e57295f0372abfcbe6b6ca4ae7713e1b13ad56985d"
+  tag: "latest@sha256:bb1a890daefaa223b914b49e183687f93c599b74065ac2acb0e52c7414cddd16"
 
 imagePullSecrets: []
 nameOverride: ""
