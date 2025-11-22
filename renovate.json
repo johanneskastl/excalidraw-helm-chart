@@ -34,7 +34,8 @@
       "matchManagers": ["helm-values"],
       "postUpgradeTasks": {
         "commands": [
-          "./scripts/update_chart.sh '{{{parentDir}}}' '{{{updateType}}}' '{{{newDigest}}}'"
+          "./scripts/update_chart.sh '{{{parentDir}}}' '{{{updateType}}}' '{{{newDigest}}}'",
+          "./scripts/generate_readmes_with_helm-docs.sh '{{{parentDir}}}'"
         ],
         "fileFilters": [
           "**/Chart.yaml",
