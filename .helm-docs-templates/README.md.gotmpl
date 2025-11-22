@@ -1,72 +1,96 @@
-{{- define "repository.organization" -}}
+{{- define "custom.repository.organization" -}}
   johanneskastl-excalidraw
 {{- end -}}
 
-{{- define "repository.url" -}}
+{{- define "custom.repository.url" -}}
   https://github.com/johanneskastl/excalidraw-helm-chart
 {{- end -}}
 
-{{- define "helm.url" -}}
+{{- define "custom.helm.url" -}}
   https://johanneskastl.github.io/excalidraw-helm-chart/
 {{- end -}}
 
-{{- define "helm.path" -}}
-    {{ template "repository.organization" . }}/{{ template "chart.name" . }}
+{{- define "custom.helm.path" -}}
+{{ template "custom.repository.organization" . }}/{{ template "chart.name" . }}
 {{- end -}}
 
-{{- define "dependenciesHeader" -}}
+{{- define "custom.requirements" -}}
+## Requirements
+
+{{ template "chart.kubeVersionLine" . }}
+{{- end -}}
+
+{{- define "custom.dependencies" -}}
 ## Dependencies
+
+{{ template "chart.requirementsTable" . }}
 {{- end -}}
 
-{{- define "install.tldr" -}}
+{{- define "custom.install.tldr" -}}
 ## TL;DR
+
 ```console
-$ helm repo add {{ template "repository.organization" . }} {{ template "helm.url" . }}
-$ helm repo update
-$ helm install {{ template "chart.name" . }} {{ template "helm.path" . }}
+helm repo add {{ template "custom.repository.organization" . }} {{ template "custom.helm.url" . }}
+helm repo update
+helm install {{ template "chart.name" . }} {{ template "custom.helm.path" . }}
 ```
 {{- end -}}
 
-{{- define "install" -}}
+{{- define "custom.install" -}}
 ## Installing the Chart
-To install the chart with the release name `{{ template "chart.name" . }}`:
+
+To install the chart with the release name `{{ template "chart.name" . }}`
+
 ```console
-helm install {{ template "chart.name" . }} {{ template "helm.path" . }}
+helm install {{ template "chart.name" . }} {{ template "custom.helm.path" . }}
 ```
 {{- end -}}
 
-{{- define "uninstall" -}}
+{{- define "custom.uninstall" -}}
 ## Uninstalling the Chart
-To uninstall the `{{ template "chart.name" . }}` deployment:
+
+To uninstall the `{{ template "chart.name" . }}` deployment
+
 ```console
 helm uninstall {{ template "chart.name" . }}
 ```
-The command removes all the Kubernetes components associated with the chart and deletes the release.
+
+The command removes all the Kubernetes components associated with the chart **including persistent volumes** and deletes the release.
 {{- end -}}
 
-{{- define "configuration.header" -}}
+{{- define "custom.configuration.header" -}}
 ## Configuration
 {{- end -}}
 
-{{- define "configuration.readValues" -}}
+{{- define "custom.configuration.readValues" -}}
 Read through the [values.yaml](./values.yaml) file. It has several commented out suggested values.
 {{- end -}}
 
-{{- define "configuration.example.set" -}}
-Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
+{{- define "custom.configuration.example.set" -}}
+Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
+
 ```console
 helm install {{ template "chart.name" . }} \
   --set env.TZ="America/New York" \
-    {{ template "helm.path" . }}
+    {{ template "custom.helm.path" . }}
 ```
 {{- end -}}
 
-{{- define "configuration.example.file" -}}
+{{- define "custom.configuration.example.file" -}}
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
-For example,
+
 ```console
-helm install {{ template "chart.name" . }} {{ template "helm.path" . }} -f values.yaml
+helm install {{ template "chart.name" . }} {{ template "custom.helm.path" . }} -f values.yaml
 ```
+{{- end -}}
+
+{{- define "custom.valuesSection" -}}
+{{- end -}}
+
+{{- define "custom.support" -}}
+## Support
+
+Open an [issue](https://github.com/johanneskastl/excalidraw-helm-chart/issues/).
 {{- end -}}
 
 {{ template "chart.header" . }}
@@ -75,20 +99,33 @@ helm install {{ template "chart.name" . }} {{ template "helm.path" . }} -f value
 
 {{ template "chart.description" . }}
 
-{{ template "chart.kubeVersionLine" . }}
+{{ template "custom.notes" . }}
 
-{{ template "install.tldr" . }}
+{{ template "chart.sourcesSection" . }}
 
-{{ template "install" . }}
+{{ template "custom.requirements" . }}
 
-{{ template "uninstall" . }}
+{{ template "custom.dependencies" . }}
 
-{{ template "configuration.header" . }}
+{{ template "custom.install.tldr" . }}
 
-{{ template "configuration.readValues" . }}
+{{ template "custom.install" . }}
 
-{{ template "configuration.example.set" . }}
+{{ template "custom.uninstall" . }}
 
-{{ template "configuration.example.file" . }}
+{{ template "custom.configuration.header" . }}
 
-{{ template "helm-docs.versionFooter" . }}
+{{ template "custom.configuration.readValues" . }}
+
+{{ template "custom.configuration.example.set" . }}
+
+{{ template "custom.configuration.example.file" . }}
+
+{{ template "custom.custom.configuration" . }}
+
+{{ template "custom.valuesSection" . }}
+
+{{ template "custom.changelog" . }}
+
+{{ template "custom.support" . }}
+{{ "" }}
