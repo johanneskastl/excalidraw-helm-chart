@@ -37,9 +37,9 @@
           "./scripts/update_chart.sh '{{{parentDir}}}' '{{{updateType}}}' '{{{newDigest}}}'"
         ],
         "fileFilters": [
-                "**/Chart.yaml",
-                "**/README.md",
-                "**/README_CHANGELOG.md.gotmpl"
+          "**/Chart.yaml",
+          "**/README.md",
+          "**/README_CHANGELOG.md.gotmpl"
         ],
         "executionMode": "branch"
       }
