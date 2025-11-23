@@ -1,6 +1,6 @@
 # excalidraw
 
-![Version: 0.6.4](https://img.shields.io/badge/Version-0.6.4-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
+![Version: 0.6.5](https://img.shields.io/badge/Version-0.6.5-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
 
 Virtual whiteboard for sketching hand-drawn like diagrams
 
@@ -62,6 +62,20 @@ All notable changes to this Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Version 0.6.5
+
+#### Added
+
+* N/A
+
+#### Changed
+
+* update excalidraw digest to sha256:bb1a890daefaa223b914b49e183687f93c599b74065ac2acb0e52c7414cddd16
+
+#### Fixed
+
+* N/A
 
 ### Version 0.6.4
 
