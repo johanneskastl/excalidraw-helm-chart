@@ -4,6 +4,28 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: update excalidraw digest to sha256:72600b725cfbf0c74f090b748f11bdd41ae205fc065ad02080d7b2ec37566079
+    apiVersion: v2
+    created: "2026-04-26T07:36:46.485643807Z"
+    description: Virtual whiteboard for sketching hand-drawn like diagrams
+    digest: a497785e14ac257d37af340af7e43953bcbf276754d645e5560eb6a7a77c647d
+    home: https://github.com/johanneskastl/excalidraw-helm-chart/tree/main/charts/excalidraw/
+    keywords:
+    - whiteboard
+    - excalidraw
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: excalidraw
+    sources:
+    - https://github.com/excalidraw/excalidraw
+    type: application
+    urls:
+    - https://github.com/johanneskastl/excalidraw-helm-chart/releases/download/excalidraw-0.6.7/excalidraw-0.6.7.tgz
+    version: 0.6.7
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: update excalidraw digest to sha256:9a92beb30c9bc18585bfd9adbb5cf7120b756b781363a66333b31cc8a0783e51
     apiVersion: v2
     created: "2026-01-05T12:35:51.106603166Z"
@@ -202,4 +224,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/excalidraw-helm-chart/releases/download/excalidraw-0.2.0/excalidraw-0.2.0.tgz
     version: 0.2.0
-generated: "2026-01-05T12:35:51.106672186Z"
+generated: "2026-04-26T07:36:46.485753251Z"
